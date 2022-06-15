@@ -1,0 +1,25 @@
+package com.company;
+
+import java.util.Scanner;
+
+ /*
+   Задача:
+   Дана строка, проверить является ли она палиндромом
+  */
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in); //создание объекта сканера
+        System.out.println("Введите слово, чтобы проверить является ли оно палиндромом: ");
+        String s = scanner.nextLine(); //присваивание строки из сканера
+
+        //проверка
+
+        if(s.equalsIgnoreCase((new StringBuilder(s)).reverse().toString()))
+            System.out.print("Да");
+        else
+            System.out.print("Нет");
+    }
+}
